@@ -1,0 +1,67 @@
+<html t:type="layoutBookCat" t:pageTitle="Demo"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" 
+      xmlns:p="tapestry:parameter"
+      xmlns:a="tapestry-library:angular">
+
+      
+      	<!-- load without requireJS --> 
+      	<script src="${asset:context:/bookcat/vendor/angular/angular.js}"></script>
+      	<script src="${asset:context:/bookcat/vendor/angular-route/angular-route.js}"></script>
+      	<script src="${asset:context:/bookcat/vendor/angular-cookies/angular-cookies.js}"></script>
+      	<script src="${asset:context:/bookcat/vendor/angular-ui-bootstrap-bower/ui-bootstrap-tpls.js}"></script>
+      	<script src="${asset:context:/bookcat/vendor/angular-translate/angular-translate.js}"></script>
+      	<script src="${asset:context:/bookcat/js/app.js}"></script>
+      	<script src="${asset:context:/bookcat/js/services/CatalogService.js}"></script>
+		<script src="${asset:context:/bookcat/js/directives/mainLayout.js}"></script>
+		<script src="${asset:context:/bookcat/js/controllers/BasketController.js}"></script>
+		<script src="${asset:context:/bookcat/js/controllers/CatalogController.js}"></script>
+		<script src="${asset:context:/bookcat/js/controllers/DetailController.js}"></script>
+		<script src="${asset:context:/bookcat/js/controllers/HomeController.js}"></script>
+		<script src="${asset:context:/bookcat/js/controllers/LoginController.js}"></script>
+		<script src="${asset:context:/bookcat/js/controllers/ProfileController.js}"></script>
+      	
+ <div id="container">
+
+	<header role="banner">
+		<h1>SDCO Book Store <small>{{ '_Slogan_' | translate}}</small></h1>
+		
+		<p ng-if="user != null" class="k-basket-sum">
+			<a href="/basket" title="See basket details"><strong>{{nbItems}}</strong> {{ '_Basket_Items_' | translate}}</a>
+		</p>
+		<p ng-if="user != null" class="k-login-data">
+			Welcome, 
+			<span id="user-name">
+				<a href="#/profile">{{user.firstName}} {{user.lastName}}</a>
+			</span> 
+			[<strong><a href="#" ng-click="logout()">{{ '_Logout_' | translate}}</a></strong>]
+		</p>
+		<p ng-if="user == null" id="loginLink">
+			<a href="#/login">{{ '_Sign_In_' | translate}}</a>
+		</p>
+	</header>
+	
+	<nav>
+		<h2 class="k-skip"><a href="#wrapper">Main navigation (Skip it)</a></h2>
+		<ul class="k-navbar">
+			<li class="home"><a href="#/">Home</a></li>
+			<li><a href="#/books">Books</a></li>
+		</ul>
+	</nav>
+	
+	<div id="wrapper">
+		<div id="main" role="main">
+			<div id="main-container" class="container-fluid" ng-view="">
+			</div>
+		</div>
+			
+		<aside role="complementary">
+		</aside>
+	</div>
+	
+	<footer role="contentinfo">
+		<p class="k-copyright">&copy; SDCO</p>
+	</footer>
+	
+</div>
+		
+</html>

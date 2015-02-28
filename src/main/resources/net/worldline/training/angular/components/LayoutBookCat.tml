@@ -1,0 +1,10 @@
+<html ng-app="app" lang="en" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" xmlns:p="tapestry:parameter">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>Tapestry 5 Angular - ${pageTitle}</title>
+    </head>
+    <body>
+        <t:body />
+	</body>
+</html>
