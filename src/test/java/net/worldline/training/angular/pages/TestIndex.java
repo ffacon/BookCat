@@ -20,7 +20,7 @@ public class TestIndex extends Assert {
 	 */
 	@Test
 	public final void test() {
-		String appPackage = "dev.openshift.tapestry.angular";
+		String appPackage = "net.worldline.training.angular";
 		String appName = "App";
 		PageTester tester = new PageTester(appPackage, appName,
 				"src/main/webapp");
