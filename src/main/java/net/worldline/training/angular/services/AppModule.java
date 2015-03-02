@@ -1,6 +1,7 @@
 package net.worldline.training.angular.services;
 
 import net.worldline.training.angular.AngularSymbolConstants;
+import net.worldline.training.angular.services.javascript.AngularJavaScriptStack;
 import net.worldline.training.angular.services.javascript.BookCatJavascriptStrack;
 
 import org.apache.shiro.realm.Realm;
@@ -149,6 +150,7 @@ public class AppModule {
 
 	public static void contributeJavaScriptStackSource(	MappedConfiguration<String, JavaScriptStack> configuration) {
 		configuration.addInstance(BookCatJavascriptStrack.STACK_ID,BookCatJavascriptStrack.class);
+		configuration.addInstance(AngularJavaScriptStack.STACK_ID,AngularJavaScriptStack.class);
 	}
 
 	public static void contributeComponentClassResolver(Configuration<LibraryMapping> configuration) {
@@ -160,7 +162,7 @@ public class AppModule {
 	public static void contributeFactoryDefaults(
 			MappedConfiguration<String, String> configuration) {
 
-		configuration.add(AngularSymbolConstants.ANGULAR_CORE_PATH,"context:app/bower_components");
+		configuration.add(AngularSymbolConstants.ANGULAR_CORE_PATH,"context:bower_components");
 		configuration.add(AngularSymbolConstants.BOOKCAT_CORE_PATH,"context:bookcat");
 		configuration.add(AngularSymbolConstants.ANGULAR_VERSION, "1.3.9");
 	}
