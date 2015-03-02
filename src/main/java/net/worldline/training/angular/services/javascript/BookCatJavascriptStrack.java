@@ -1,6 +1,7 @@
 package net.worldline.training.angular.services.javascript;
 
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -50,11 +51,11 @@ public static final String STACK_ID = "BookCatStack";
 								 "${bookcat.core.path}/style/style.css").map(pathToStylesheetLink).toList(); 
 
             javaScriptStack = F
-                .flow(   "${bookcat.core.path}/vendor/angular/angular.js",
+                .flow(   /*"${bookcat.core.path}/vendor/angular/angular.js",
 						 "${bookcat.core.path}/vendor/angular-route/angular-route.js",
 						 "${bookcat.core.path}/vendor/angular-cookies/angular-cookies.js",
 						 "${bookcat.core.path}/vendor/angular-translate/angular-translate.js",
-						 "${bookcat.core.path}/vendor/angular-ui-bootstrap-bower/ui-bootstrap-tpls.js",
+						 "${bookcat.core.path}/vendor/angular-ui-bootstrap-bower/ui-bootstrap-tpls.js",*/
 						 "${bookcat.core.path}/js/app.js",
 						 "${bookcat.core.path}/js/services/CatalogService.js",
 						 "${bookcat.core.path}/js/controllers/BasketController.js",
@@ -76,11 +77,11 @@ public static final String STACK_ID = "BookCatStack";
 
 
             javaScriptStack = F
-                    .flow(   "${bookcat.core.path}/vendor/angular/angular.js",
+                    .flow(  /* "${bookcat.core.path}/vendor/angular/angular.js",
 							 "${bookcat.core.path}/vendor/angular-route/angular-route.js",
 							 "${bookcat.core.path}/vendor/angular-cookies/angular-cookies.js",
 							 "${bookcat.core.path}/vendor/angular-translate/angular-translate.js",
-							 "${bookcat.core.path}/vendor/angular-ui-bootstrap-bower/ui-bootstrap-tpls.js",
+							 "${bookcat.core.path}/vendor/angular-ui-bootstrap-bower/ui-bootstrap-tpls.js",*/
 							 "${bookcat.core.path}/js/app.js",
 							 "${bookcat.core.path}/js/services/CatalogService.js",
 							 "${bookcat.core.path}/js/controllers/BasketController.js",
@@ -112,7 +113,9 @@ public static final String STACK_ID = "BookCatStack";
 
     public List<String> getStacks()
     {
-        return Collections.emptyList();
+    	List<String> ret = new ArrayList(0);
+    	ret.add(AngularJavaScriptStack.STACK_ID);
+        return ret;
     }
 
 }
