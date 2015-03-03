@@ -40,9 +40,11 @@ import org.apache.tapestry5.services.AssetSource;
 import org.apache.tapestry5.services.PageRenderLinkSource;
 import org.apache.tapestry5.services.Response;
 import org.apache.tapestry5.services.javascript.JavaScriptSupport;
+import org.tynamo.routing.annotations.Route;
 
 @Import(stylesheet={"context:/phonecat/css/phonecat/app.css","context:/phonecat/css/phonecat/bootstrap.css"})
 @Events({ "phones","phoneDetails"})
+@Route("/phonecat/") 
 public class Phonecat
 {
 

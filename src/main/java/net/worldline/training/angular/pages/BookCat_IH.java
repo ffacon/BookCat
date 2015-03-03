@@ -17,14 +17,15 @@
 package net.worldline.training.angular.pages;
 
 import org.apache.tapestry5.annotations.Import;
+import org.tynamo.routing.annotations.Route;
 
 import net.worldline.training.angular.services.javascript.BookCatJavascriptStrack;
 
 
-@Import(stylesheet={"context:/bookcat/style/bootstrap.css",
-					"context:/bookcat/style/k-structure.css",
+@Import(stylesheet={"context:/bookcat/style/k-structure.css",
 					"context:/bookcat/style/k-theme0.css",
 					"context:/bookcat/style/style.css"})
+@Route("/BookCat_IH/") 
 public class BookCat_IH
 {	 
 	

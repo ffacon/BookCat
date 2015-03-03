@@ -19,8 +19,7 @@ package net.worldline.training.angular.pages;
 import org.apache.tapestry5.annotations.Import;
 
 
-@Import(stylesheet={"context:/bookcat/style/bootstrap.css",
-					"context:/bookcat/style/k-structure.css",
+@Import(stylesheet={"context:/bookcat/style/k-structure.css",
 					"context:/bookcat/style/k-theme0.css",
 					"context:/bookcat/style/style.css"},
 		library={"context:/bower_components/angular/angular.js",
@@ -28,8 +27,10 @@ import org.apache.tapestry5.annotations.Import;
 				 "context:/bower_components/angular-cookies/angular-cookies.js",
 				 "context:/bower_components/angular-translate/angular-translate.js",
 				 "context:/bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.js",
+				 "context:/bower_components/angular-resource/angular-resource.js",
 				 "context:/bookcat/js/app.js",
 				 "context:/bookcat/js/services/CatalogService.js",
+				 "context:/bookcat/js/services/NewsService.js",
 				 "context:/bookcat/js/controllers/BasketController.js",
 				 "context:/bookcat/js/controllers/CatalogController.js",
 				 "context:/bookcat/js/controllers/DetailController.js",
