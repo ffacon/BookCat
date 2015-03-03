@@ -45,19 +45,14 @@ public static final String STACK_ID = "BookCatStack";
 
         if (productionMode) {
         	
-        stylesheetStack = F.flow("${bookcat.core.path}/style/bootstrap.css",
-        						 "${bookcat.core.path}/style/k-structure.css",
+        stylesheetStack = F.flow("${bookcat.core.path}/style/k-structure.css",
         						 "${bookcat.core.path}/style/k-theme0.css",
 								 "${bookcat.core.path}/style/style.css").map(pathToStylesheetLink).toList(); 
 
             javaScriptStack = F
-                .flow(   /*"${bookcat.core.path}/vendor/angular/angular.js",
-						 "${bookcat.core.path}/vendor/angular-route/angular-route.js",
-						 "${bookcat.core.path}/vendor/angular-cookies/angular-cookies.js",
-						 "${bookcat.core.path}/vendor/angular-translate/angular-translate.js",
-						 "${bookcat.core.path}/vendor/angular-ui-bootstrap-bower/ui-bootstrap-tpls.js",*/
-						 "${bookcat.core.path}/js/app.js",
+                .flow(   "${bookcat.core.path}/js/app.js",
 						 "${bookcat.core.path}/js/services/CatalogService.js",
+						 "${bookcat.core.path}/js/services/NewsService.js",
 						 "${bookcat.core.path}/js/controllers/BasketController.js",
 						 "${bookcat.core.path}/js/controllers/CatalogController.js",
 						 "${bookcat.core.path}/js/controllers/DetailController.js",
@@ -69,21 +64,15 @@ public static final String STACK_ID = "BookCatStack";
 
         } else {
         	
-        	stylesheetStack = F.flow("${bookcat.core.path}/style/bootstrap.css",
-        	 
-					 				"${bookcat.core.path}/style/k-structure.css",
+        	stylesheetStack = F.flow("${bookcat.core.path}/style/k-structure.css",
 					 				"${bookcat.core.path}/style/k-theme0.css",
 					 				"${bookcat.core.path}/style/style.css").map(pathToStylesheetLink).toList(); 
 
 
             javaScriptStack = F
-                    .flow(  /* "${bookcat.core.path}/vendor/angular/angular.js",
-							 "${bookcat.core.path}/vendor/angular-route/angular-route.js",
-							 "${bookcat.core.path}/vendor/angular-cookies/angular-cookies.js",
-							 "${bookcat.core.path}/vendor/angular-translate/angular-translate.js",
-							 "${bookcat.core.path}/vendor/angular-ui-bootstrap-bower/ui-bootstrap-tpls.js",*/
-							 "${bookcat.core.path}/js/app.js",
+                    .flow( 	 "${bookcat.core.path}/js/app.js",
 							 "${bookcat.core.path}/js/services/CatalogService.js",
+							 "${bookcat.core.path}/js/services/NewsService.js",
 							 "${bookcat.core.path}/js/controllers/BasketController.js",
 							 "${bookcat.core.path}/js/controllers/CatalogController.js",
 							 "${bookcat.core.path}/js/controllers/DetailController.js",

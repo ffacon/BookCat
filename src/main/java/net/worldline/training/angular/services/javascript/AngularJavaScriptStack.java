@@ -22,12 +22,10 @@ import org.apache.tapestry5.Asset;
 import org.apache.tapestry5.SymbolConstants;
 import org.apache.tapestry5.func.F;
 import org.apache.tapestry5.func.Mapper;
-import org.apache.tapestry5.internal.services.javascript.CoreJavaScriptStack;
 import org.apache.tapestry5.ioc.annotations.Symbol;
 import org.apache.tapestry5.services.AssetSource;
 import org.apache.tapestry5.services.javascript.JavaScriptStack;
 import org.apache.tapestry5.services.javascript.StylesheetLink;
-import org.got5.tapestry5.jquery.utils.JQueryUtils;
 
 public class AngularJavaScriptStack implements JavaScriptStack {
 
@@ -36,8 +34,6 @@ public class AngularJavaScriptStack implements JavaScriptStack {
 	private final boolean productionMode;
 
     private final List<Asset> javaScriptStack;
-
-    //private final List<StylesheetLink> stylesheetStack;
 
     public AngularJavaScriptStack(@Symbol(SymbolConstants.PRODUCTION_MODE)
                                  final boolean productionMode,
@@ -56,16 +52,9 @@ public class AngularJavaScriptStack implements JavaScriptStack {
         };
 
 
-        //final Mapper<String, StylesheetLink> pathToStylesheetLink = F.combine(pathToAsset, JQueryUtils.assetToStylesheetLink);
-
-        
-
         if (productionMode) {
         	
-        	//stylesheetStack = F.flow("${angular.core.path}/angular-${angular.version}/angular-${angular.version}.min.css")
-        	//.map(pathToStylesheetLink).toList();
-
-        	 
+            	 
             javaScriptStack = F
                 .flow("${angular.core.path}/angular/angular.min.js",
                       //"${angular.core.path}/angular-ui-router/angular-ui-router.min.js",
@@ -79,13 +68,10 @@ public class AngularJavaScriptStack implements JavaScriptStack {
 
         } else {
         	
-        	//stylesheetStack = F.flow("${angular.core.path}/angular-${angular.version}/angular-${angular.version}.css")
-        	//.map(pathToStylesheetLink).toList();
-
 
             javaScriptStack = F
                     .flow(  "${angular.core.path}/angular/angular.js",
-                            "${angular.core.path}/angular-ui-router/release/angular-ui-router.js",
+                            //"${angular.core.path}/angular-ui-router/release/angular-ui-router.js",
                             "${angular.core.path}/angular-route/angular-route.js",
                			  	"${angular.core.path}/angular-cookies/angular-cookies.js",
                			  	"${angular.core.path}/angular-translate/angular-translate.js",
