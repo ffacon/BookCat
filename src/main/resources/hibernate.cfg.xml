@@ -14,5 +14,6 @@
         <property name="hibernate.jdbc.batch_size">0</property>
         <mapping class="net.worldline.training.angular.entity.User"/>
         <mapping class="net.worldline.training.angular.entity.Comment"/>
+        <mapping class="net.worldline.training.angular.entity.News"/>
     </session-factory>
 </hibernate-configuration>

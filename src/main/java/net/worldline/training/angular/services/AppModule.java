@@ -57,7 +57,8 @@ public class AppModule {
 		pBinder.bind(PhoneCatalog.class, PhoneCatalogImpl.class);
 		pBinder.bind(UserDAO.class, UserDAOImpl.class);
 		pBinder.bind(CommentDAO.class, CommentDAOImpl.class);
-
+		pBinder.bind(NewsDAO.class, NewsDAOImpl.class);
+		
 	}
 
 	// Tell Tapestry how to handle JBoss 7's classpath URLs - JBoss uses a
