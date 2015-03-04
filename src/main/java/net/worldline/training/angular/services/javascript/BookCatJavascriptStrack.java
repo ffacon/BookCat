@@ -50,7 +50,8 @@ public static final String STACK_ID = "BookCatStack";
 								 "${bookcat.core.path}/style/style.css").map(pathToStylesheetLink).toList(); 
 
             javaScriptStack = F
-                .flow(   "${bookcat.core.path}/js/app.js",
+                   .flow("${bookcat.core.path}/js/app.js",
+                		 "${bookcat.core.path}/js/services/auth-utils.js", 
 						 "${bookcat.core.path}/js/services/CatalogService.js",
 						 "${bookcat.core.path}/js/services/NewsService.js",
 						 "${bookcat.core.path}/js/controllers/BasketController.js",
@@ -70,7 +71,8 @@ public static final String STACK_ID = "BookCatStack";
 
 
             javaScriptStack = F
-                    .flow( 	 "${bookcat.core.path}/js/app.js",
+                       .flow("${bookcat.core.path}/js/app.js",
+                    		 "${bookcat.core.path}/js/services/auth-utils.js",
 							 "${bookcat.core.path}/js/services/CatalogService.js",
 							 "${bookcat.core.path}/js/services/NewsService.js",
 							 "${bookcat.core.path}/js/controllers/BasketController.js",
@@ -102,7 +104,7 @@ public static final String STACK_ID = "BookCatStack";
 
     public List<String> getStacks()
     {
-    	List<String> ret = new ArrayList(0);
+    	List<String> ret = new ArrayList<String>(1);
     	ret.add(AngularJavaScriptStack.STACK_ID);
         return ret;
     }

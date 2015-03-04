@@ -29,6 +29,7 @@ import org.apache.tapestry5.annotations.Import;
 				 "context:/bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.js",
 				 "context:/bower_components/angular-resource/angular-resource.js",
 				 "context:/bookcat/js/app.js",
+				 "context:/bookcat/js/services/auth-utils",
 				 "context:/bookcat/js/services/CatalogService.js",
 				 "context:/bookcat/js/services/NewsService.js",
 				 "context:/bookcat/js/controllers/BasketController.js",
