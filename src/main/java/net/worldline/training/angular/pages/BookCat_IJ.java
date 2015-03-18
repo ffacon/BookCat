@@ -32,6 +32,7 @@ import org.apache.tapestry5.annotations.Import;
 				 "context:/bookcat/js/services/auth-utils",
 				 "context:/bookcat/js/services/CatalogService.js",
 				 "context:/bookcat/js/services/NewsService.js",
+				 "context:/bookcat/js/services/ProductUtils.js",
 				 "context:/bookcat/js/controllers/BasketController.js",
 				 "context:/bookcat/js/controllers/CatalogController.js",
 				 "context:/bookcat/js/controllers/DetailController.js",

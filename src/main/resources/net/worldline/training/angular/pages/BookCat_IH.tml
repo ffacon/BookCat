@@ -15,6 +15,7 @@
       	<script src="${asset:context:/bookcat/js/services/auth-utils}"></script>
       	<script src="${asset:context:/bookcat/js/services/CatalogService.js}"></script>
       	<script src="${asset:context:/bookcat/js/services/NewsService.js}"></script>
+      	<script src="${asset:context:/bookcat/js/services/ProductUtils.js}"></script>
 		<script src="${asset:context:/bookcat/js/directives/mainLayout.js}"></script>
 		<script src="${asset:context:/bookcat/js/controllers/BasketController.js}"></script>
 		<script src="${asset:context:/bookcat/js/controllers/CatalogController.js}"></script>
