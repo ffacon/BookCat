@@ -22,24 +22,6 @@ import net.worldline.training.angular.services.javascript.BookCatJavascriptStrac
 
 
 @Import(stack = BookCatJavascriptStrack.STACK_ID
-		/*
-		stylesheet={"context:/phonecat/style/bootstrap.css",
-					"context:/phonecat/style/k-structure.css",
-					"context:/phonecat/style/k-theme0.css",
-					"context:/phonecat/style/style.css"},
-		library={"context:/app/vendor/angular/angular.js",
-				 "context:/app/vendor/angular-route/angular-route.js",
-				 "context:/app/vendor/angular-cookies/angular-cookies.js",
-				 "context:/app/vendor/angular-translate/angular-translate.js",
-				 "context:/app/vendor/angular-ui-bootstrap-bower/ui-bootstrap-tpls.js",
-				 "context:/app/js/app.js",
-				 "context:/app/js/services/CatalogService.js",
-				 "context:/app/js/controllers/BasketController.js",
-				 "context:/app/js/controllers/CatalogController.js",
-				 "context:/app/js/controllers/DetailController.js",
-				 "context:/app/js/controllers/HomeController.js",
-				 "context:/app/js/controllers/LoginController.js",
-				 "context:/app/js/controllers/ProfileController.js"} */
 )
 public class Index
 {	 
