@@ -50,7 +50,8 @@ public static final String STACK_ID = "BookCatStack";
 								 "${bookcat.core.path}/style/style.css").map(pathToStylesheetLink).toList(); 
 
             javaScriptStack = F
-                   .flow("${bookcat.core.path}/js/app.js",
+                   .flow("${bookcat.core.path}/js/modules/sdco.js",
+                		 "${bookcat.core.path}/js/app.js",
                 		 "${bookcat.core.path}/js/services/auth-utils.js", 
 						 "${bookcat.core.path}/js/services/CatalogService.js",
 						 "${bookcat.core.path}/js/services/NewsService.js",
@@ -72,7 +73,8 @@ public static final String STACK_ID = "BookCatStack";
 
 
             javaScriptStack = F
-                       .flow("${bookcat.core.path}/js/app.js",
+                       .flow("${bookcat.core.path}/js/modules/sdco.js",
+                       		 "${bookcat.core.path}/js/app.js",
                     		 "${bookcat.core.path}/js/services/auth-utils.js",
 							 "${bookcat.core.path}/js/services/CatalogService.js",
 							 "${bookcat.core.path}/js/services/NewsService.js",
