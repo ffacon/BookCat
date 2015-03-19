@@ -16,17 +16,11 @@
 
 
 
-            $scope.getImage = function (id) {
-        if (!id) {
-            return "";
-        } else {
-            return "/bookcat/img/catalog/" + id + ".jpg";
-        }
-    };
+            $scope.getImage = ProductUtils.getImage;
 
 
-    /** Returns the CSS class for the average rating of a given product. */
-    $scope.getCSSRating = ProductUtils.getRatingCss;
+            /** Returns the CSS class for the average rating of a given product. */
+            $scope.getCSSRating = ProductUtils.getRatingCss;
 
 }]);
 })();
