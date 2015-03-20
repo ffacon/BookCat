@@ -6,7 +6,7 @@
 
         return {
             restrict: 'E',
-            templateUrl: 'templates/partials/productSummary.html',
+            templateUrl: 'bookcat/templates/partials/productSummary.html',
             scope:{
                 product:'='
             },
