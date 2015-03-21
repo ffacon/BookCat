@@ -20,10 +20,9 @@ import org.apache.tapestry5.annotations.Import;
 
 import net.worldline.training.angular.services.javascript.BookCatJavascriptStrack;
 
-@Import(stylesheet={"context:/bookcat/style/k-structure.css",
-		"context:/bookcat/style/k-theme0.css",
-		"context:/bookcat/style/style.css"})
-public class Index
+
+@Import(stack = BookCatJavascriptStrack.STACK_ID)
+public class BookCat
 {	 
 	
 	

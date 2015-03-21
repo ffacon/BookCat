@@ -29,7 +29,6 @@ import org.apache.tapestry5.services.Request;
 import org.apache.tapestry5.services.javascript.JavaScriptSupport;
 
 
-
 public class Layout
 {
 	@SuppressWarnings("unused")

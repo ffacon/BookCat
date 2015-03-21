@@ -1,16 +1,24 @@
-<html t:type="layoutBookCat" t:pageTitle="Demo"
+<html t:type="T5Layout" t:pageTitle="Login"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd" 
-      xmlns:p="tapestry:parameter"
-      xmlns:a="tapestry-library:angular">
-           	
- 	<div id="wrapper">
-		<div id="main" role="main">
-			<div id="main-container" class="container-fluid" ng-view="">
-			</div>
-		</div>
+      xmlns:p="tapestry:parameter">
+
+<div>
+    <div class="container">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h1 >Welcome </h1>
 			
-		<aside role="complementary">
-		</aside>
-	</div>
+			<nav>
+			<h2 class="k-skip"><a href="#wrapper">Main navigation (Skip it)</a></h2>
+			<ul class="k-navbar">
+				<li class="home"><a href="bookcat">Book Catalog</a></li>
+				<li><a href="phonecat">Phone Catalog</a></li>
+			</ul>
+			</nav>
 		
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
+
 </html>
