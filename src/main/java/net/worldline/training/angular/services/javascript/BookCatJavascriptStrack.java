@@ -45,7 +45,8 @@ public static final String STACK_ID = "BookCatStack";
 
         if (productionMode) {
         	
-        stylesheetStack = F.flow("${bookcat.core.path}/style/k-structure.css",
+        stylesheetStack = F.flow("${bookcat.core.path}/style/bootstrap.css",
+        						 "${bookcat.core.path}/style/k-structure.css",
         						 "${bookcat.core.path}/style/k-theme0.css",
 								 "${bookcat.core.path}/style/style.css").map(pathToStylesheetLink).toList(); 
 
@@ -62,15 +63,18 @@ public static final String STACK_ID = "BookCatStack";
 						 "${bookcat.core.path}/js/controllers/DetailController.js",
 						 "${bookcat.core.path}/js/controllers/HomeController.js",
 						 "${bookcat.core.path}/js/controllers/LoginController.js",
-						 "${bookcat.core.path}/js/controllers/ProfileController.js")
+						 "${bookcat.core.path}/js/controllers/ProfileController.js",
+						 "${bookcat.core.path}/js/filters/startFrom.js"
+						)
             .map(pathToAsset).toList();
 
 
         } else {
         	
-        	stylesheetStack = F.flow("${bookcat.core.path}/style/k-structure.css",
-					 				"${bookcat.core.path}/style/k-theme0.css",
-					 				"${bookcat.core.path}/style/style.css").map(pathToStylesheetLink).toList(); 
+        	stylesheetStack = F.flow("${bookcat.core.path}/style/bootstrap.css",
+        							 "${bookcat.core.path}/style/k-structure.css",
+					 				 "${bookcat.core.path}/style/k-theme0.css",
+					 				 "${bookcat.core.path}/style/style.css").map(pathToStylesheetLink).toList(); 
 
 
             javaScriptStack = F
@@ -86,7 +90,9 @@ public static final String STACK_ID = "BookCatStack";
 							 "${bookcat.core.path}/js/controllers/DetailController.js",
 							 "${bookcat.core.path}/js/controllers/HomeController.js",
 							 "${bookcat.core.path}/js/controllers/LoginController.js",
-							 "${bookcat.core.path}/js/controllers/ProfileController.js")
+							 "${bookcat.core.path}/js/controllers/ProfileController.js",
+							 "${bookcat.core.path}/js/filters/startFrom.js"
+							 )
                     .map(pathToAsset).toList();
 
         }
