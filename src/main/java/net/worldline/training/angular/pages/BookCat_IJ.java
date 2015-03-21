@@ -30,7 +30,7 @@ import org.apache.tapestry5.annotations.Import;
 				 "context:/bower_components/angular-resource/angular-resource.js",
 				 "context:/bookcat/js/modules/sdco.js",
 				 "context:/bookcat/js/app.js",
-				 "context:/bookcat/js/services/auth-utils",
+				 "context:/bookcat/js/services/auth-utils.js",
 				 "context:/bookcat/js/services/CatalogService.js",
 				 "context:/bookcat/js/services/NewsService.js",
 				 "context:/bookcat/js/services/ProductUtils.js",
@@ -40,7 +40,8 @@ import org.apache.tapestry5.annotations.Import;
 				 "context:/bookcat/js/controllers/DetailController.js",
 				 "context:/bookcat/js/controllers/HomeController.js",
 				 "context:/bookcat/js/controllers/LoginController.js",
-				 "context:/bookcat/js/controllers/ProfileController.js"} 
+				 "context:/bookcat/js/controllers/ProfileController.js",
+				 "context:/bookcat/js/filters/startFrom.js"} 
 )
 public class BookCat_IJ
 {	 
