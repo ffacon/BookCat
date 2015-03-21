@@ -14,8 +14,7 @@
                 scope.getRatingClass = ProductUtils.getRatingCss;
             },
 
-            controller: ['$scope','$location',
-                'UserService',
+            controller: ['$scope','$location', 'UserService',
                 function ($scope,$location,UserService) {
 
                     $scope.addToCart = function (pItem) {
