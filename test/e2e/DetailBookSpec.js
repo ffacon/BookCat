@@ -1,7 +1,7 @@
 describe("Detail Book Page", function () {
 
     beforeEach(function(){
-        browser.get('http://localhost:8080/#/book/1');
+        browser.get('http://localhost:8080/bookcat#/book/1');
     });
 
     it("Check Book Name", function () {
@@ -14,14 +14,14 @@ describe("Detail Book Page", function () {
         qty.clear();
         /*browser.debugger();*/
         qty.sendKeys(2);
-        expect(element(by.binding('product.price * quantity')).getText()).toEqual('$30.68');
+        expect(element(by.binding('product.price * quantity |currency')).getText()).toEqual('$30.68');
     });
 
 
 
     it('The image url is correct', function () {
         browser.debugger();
-        expect(element(by.css('.photo')).getAttribute('src')).toEqual('http://localhost:3000/img/catalog/1.jpg');
+        expect(element(by.css('.photo')).getAttribute('src')).toEqual('http://localhost:8080/bookcat/img/catalog/1.jpg');
     });
 
 });
