@@ -20,10 +20,6 @@
                                            }
                                        }]);
 
-    angular.module('app').controller('LogoutController', ['$location', 'AuthenticationSharedService',
-                                     function ($location, AuthenticationSharedService) {
-                                          AuthenticationSharedService.logout();
-                                       }]);
 })();
 
 
