@@ -9,15 +9,8 @@
             catalogService.getCatalog().success(function (result) {
                 $scope.products = result;
             });
-            
-            $scope.getRatingClass = ProductUtils.getRatingCss;
-
-            $scope.addToCart = function(pItem){
-                 UserService.addToCart(pItem,1);
-                 $location.path('/basket');
-            };
-            
-            $scope.nbResults= 5;
                  
+            $scope.nbResults= 5;
+            
         }]);
 })();
