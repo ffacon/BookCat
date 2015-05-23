@@ -96,8 +96,10 @@ var baseUrl;
                     }
             }});
             }
-        ]).run(['$rootScope', '$location', '$http', 'AuthenticationSharedService',  'Session', 'USER_ROLES',
+        ]).run(['$rootScope', '$location', '$http', 'AuthenticationSharedService',  'Session', 'USER_ROLES', 
                 function run( $rootScope, $location, $http, AuthenticationSharedService,  Session, USER_ROLES){
+       
+       AuthenticationSharedService.valid(); 	
         
        $rootScope.$on('$routeChangeStart', function (event, next) {
             $rootScope.isAuthorized = AuthenticationSharedService.isAuthorized;
