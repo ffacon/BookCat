@@ -16,7 +16,6 @@ var baseUrl;
             function ($routeProvider, $locationProvider, $httpProvider, $translateProvider, USER_ROLES) {
                 $locationProvider.html5Mode(false);
 
-                //baseUrl = window.location.origin + window.location.pathname + "bookcat/";
                 baseUrl = "bookcat/";
                 
                 $routeProvider.when('/', {
