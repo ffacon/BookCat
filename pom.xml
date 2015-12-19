@@ -4,7 +4,7 @@
 	<groupId>net.worldline.training</groupId>
 	<artifactId>angular-jee-training</artifactId>
 	<packaging>war</packaging>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<name>angular jee training</name>
 		
 	<properties>
@@ -87,7 +87,7 @@
 		<dependency>
 			<groupId>org.got5</groupId>
         	<artifactId>tapestry5-jquery</artifactId>
-            <version>3.3.10</version>
+            <version>3.4.2</version>
 		</dependency>
 
         <dependency>
@@ -156,8 +156,11 @@
                         to avoid lock on html
                         http://appfuse.org/display/APF/FAQ#FAQ-jettyrunlocked  
                         -->
-                        <webDefaultXml>src/main/resources/webdefault.xml</webDefaultXml>
+                        <webAppConfig>
+                            <defaultsDescriptor>src/main/resources/webdefault.xml</defaultsDescriptor>
+                        </webAppConfig>
                     </configuration>
+
                 </plugin>
             </plugins>
          </build>
@@ -203,41 +206,6 @@
                <enabled>false</enabled>
            </snapshots>
        </repository>
-
-		<repository>
-			<id>devlab722-repo</id>
-			<url>http://nexus.devlab722.net/nexus/content/repositories/releases</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-
-		<repository>
-			<id>devlab722-snapshot-repo</id>
-			<url>http://nexus.devlab722.net/nexus/content/repositories/snapshots</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-		
-		<repository>
-			<id>pullrequest-snapshot-repo</id>
-			<url>http://nexus.pullrequest.org/content/repositories/snapshots</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-		
-
 
 	</repositories>
    
