@@ -44,4 +44,5 @@ grunt test:e2e
 ```
 
 ## Changelog 
+* 1.0.1 : initial version For Tapestry-jQuery 3.4.2 & Angular 1.4.8
 * 1.0.0 : initial version For Tapestry 5.3.8 & Angular 1.3.9
